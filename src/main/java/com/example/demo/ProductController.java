@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class ProductController {
     @RequestMapping(value="", method= RequestMethod.GET)
     public String findProduct(){
-        return "Hello World!";
+        // 객체 직접 생성 및 주입. IoC와 DI가 구현되지 않은 상태
+        ProductService productService = new ProductService();
+        return productService.findProduct();
     }
 }
