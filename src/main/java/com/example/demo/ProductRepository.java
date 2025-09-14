@@ -10,9 +10,9 @@ public class ProductRepository {
 
     private Map<Integer, String> db = new HashMap<>();
     private Integer id = 1;
-    public String findProduct()
+    public String findProduct(int id)
     {
-        return db.get(1);
+        return db.get(id);
     }
     public void save(String productName){
         db.put(id++, productName);
